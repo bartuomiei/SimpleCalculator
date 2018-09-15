@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="/css/main-view.css" media="screen">
+</head>
+<body>
+
+
+<form method="post" th:action="@{/calc}" th:object="${equation}">
+    <fieldset>
+        <legend>SIMPLE CALCULATOR</legend>
+
+        <div class="input-container">
+            <div class="input1">
+                <input class="number-input" th:field="${equation.value1}" type="number" step="any" name="value1" />
+            </div>
+            <div class="operation-type">
+                <span th:text="${equation.operationType}">Operator</span>
+            </div>
+            <div class="input2">
+                <input class="number-input" th:field="${equation.value2}" type="number" step="any" name="value2" /><br/>
+            </div>
+        </div>
+        <div class="result-container">
+            <div class="result-output-div">
+                <span class="result-output-span" th:text="${equation.result}" name="result"
+                <!--th:unless="${(equation.value2 == 0 and equation.operationType == ' / ') or
+                  ((equation.value1 <=0 or equation.value2 == 0) and equation.operationType == ' ROOT ')}"--> >Result printed here</span><br/>
+            </div>
+            <div class="result-text-div">
+                <span class="result-text-span">RESULT:</span>
+            </div>
+        </div>
+        <div class="error-text-container">
+            <span class="error-text" th:text="${errorTextDevide}"
+                      th:if="${equation.value2 == 0 and equation.operationType == ' / '}">Error message</span>
+            <span class="error-text" th:text="${errorTextRoot}"
+                      th:if="${(equation.value1 <=0 or equation.value2 == 0) and equation.operationType == ' ROOT '}">Error message</span>
+        </div>
+        <hr />
+
+        <div class="buttons-div">
+            <div class="button1-container">
+                <input type="submit" class="button1" name="operationType" value="+" />
+                <input type="submit" class="button1" name="operationType" value="-" />
+                <input type="submit" class="button1" name="operationType" value="*" />
+                <input type="submit" class="button1" name="operationType" value="/" />
+                <input type="submit" class="button1" name="operationType" value="x ^ y" />
+                <input type="submit" class="button1" name="operationType" value="x root y" />
+            </div>
+            <div class="button2-container">
+                <a th:href="@{/calc}"><input type="button" class="button2" value="CE" /></a>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+</body>
+</html>

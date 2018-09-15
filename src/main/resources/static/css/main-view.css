@@ -1,0 +1,132 @@
+body {
+    background-color: #ffff007d;
+}
+
+fieldset {
+    background-color: #4fd0f7;
+    margin: 100px 0;
+    border-radius: 15px;
+}
+
+legend {
+    text-align: center;
+    font-size: 16px;
+    padding: 2px 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #4fd0f7;
+}
+
+form {
+    margin: 0 auto;
+    width: 350px;
+}
+
+div {
+    display: inline-block;
+}
+
+.input-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.number-input {
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+}
+
+.input1 {
+    width: 100px;
+    float: left;
+}
+
+.input2 {
+    width: 100px;
+    float: right;
+}
+
+.operation-type {
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result-container {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.result-text-div {
+    height: 30px;
+    width: 100px;
+    float: right;
+}
+
+.result-text-span {
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px 0 0;
+    text-align: right;
+    font-weight: bold;
+    float: right;
+}
+
+.result-output-div {
+    height: 30px;
+    width: 100px;
+    float: right;
+}
+
+.result-output-span {
+    background-color: white;
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+    padding: 10px 0 0 0;
+    float: right;
+    text-align: right;
+    overflow: hidden;
+}
+
+.error-text-container {
+    width: 100%;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons-div {
+    width: 100%;
+}
+
+.buttons-div input {
+    border-radius: 10px;
+}
+
+.button1-container {
+    float: left;
+    width: 250px;
+}
+
+.button1 {
+    height: 50px;
+    width: 80px;
+    margin: 2px 0;
+    font-size: 20px;
+}
+
+.button2-container {
+    float: right;
+}
+
+.button2 {
+    height: 104px;
+    width: 50px;
+    margin: 2px 0;
+    font-size: 20px;
+}
